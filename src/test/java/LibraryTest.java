@@ -17,7 +17,7 @@ public class LibraryTest {
         testBooks.add("Some Java in the morning");
         testBooks.add("Building SOLID foundations in code");
         testBooks.add("A guide to public coding libraries around the world");
-        myBookCollection = new Library(testBooks);
+        myBookCollection = new Library(testBooks, 5);
     }
 
     @Test
@@ -25,9 +25,27 @@ public class LibraryTest {
         assertEquals(4, myBookCollection.libraryBookCount());
     }
 
+//    @Test
+//    public void canAddBookToLibraryStock() {
+//        myBookCollection.addBook("Coding for Cats");
+//        assertEquals(5, myBookCollection.libraryBookCount());
+//    }
+
     @Test
-    public void canAddBookToLibraryStock() {
+    public void canGetLibraryCollectionCapacity() {
+        assertEquals(5, myBookCollection.checkLibraryCapacity());
+    }
+
+    @Test
+    public void canAddBookIfSpaceInCollection() {
         myBookCollection.addBook("Coding for Cats");
+        assertEquals(5, myBookCollection.libraryBookCount());
+    }
+
+    @Test
+    public void notAddBookIfAtCapacity() {
+        myBookCollection.addBook("Coding for Cats");
+        myBookCollection.addBook("How DRY is your code really?");
         assertEquals(5, myBookCollection.libraryBookCount());
     }
 }
