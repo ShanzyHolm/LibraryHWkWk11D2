@@ -17,7 +17,7 @@ public class LibraryTest {
         testBooks.add("Some Java in the morning");
         testBooks.add("Building SOLID foundations in code");
         testBooks.add("A guide to public coding libraries around the world");
-//      testBooks = new Books("CodeClan History", "Ally", "historical non fiction"); //CANNOT GET WORKING - DO I NEED A HASH??
+//      testBooks = new Books("CodeClan History", "Ally", "historical nonfiction"); //CANNOT GET WORKING - DO I NEED A HASH??
         myBookCollection = new Library(testBooks, 5);
     }
 
